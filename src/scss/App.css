@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-videos .titulo-videos {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  width: 100vw;
+  font-family: "oswald", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+header .contenedor-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+header .contenedor-menu .contenedor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .contenedor-menu .contenedor-logo img {
+  padding-right: 10vw;
+  height: 45px;
+}
+header .contenedor-menu .contenedor-logo img:hover {
+  cursor: pointer;
+  /* @include animacion(pulse, 2s); */
+}
+header .contenedor-menu .contenedor-nav {
+  list-style-type: none;
+  grid-area: menu;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 10vw;
+}
+header .contenedor-menu .contenedor-nav a {
+  padding-left: 30px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+header .contenedor-menu .contenedor-nav a:hover {
+  color: rgb(134, 134, 134);
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-videos .titulo-videos {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+/* INICIO */
+main .imagen-fondo-inicio {
+  background-image: url("https://drive.google.com/uc?id=1ih2XCoh8OCSpe2-8lMaHuEw9tQBsSRBs");
+  height: 100vh;
+  background-size: cover;
+}
+main .contenedor-videos {
+  height: 100vh;
+  background: rgb(15, 15, 15);
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: ". . . . . . . . ." ". . . titulo titulo titulo . . ." ". video video video video parrafo parrafo parrafo ." ". video video video video parrafo parrafo parrafo ." ". video video video video parrafo parrafo parrafo ." ". . . . . . . . .";
+}
+main .contenedor-videos .titulo-videos {
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor-videos .video {
+  grid-area: video;
+}
+main .contenedor-videos .video iframe {
+  margin-top: 2vh;
+  width: 40vw;
+  height: 45vh;
+  border: 0px;
+}
+main .contenedor-videos .contenedor-parrafo {
+  grid-area: parrafo;
+  text-align: center;
+  padding: 22% 0px 4vh 2vw;
+  font-family: "oswald", sans-serif;
+  font-weight: 300;
+  /* @include animacion; */
+}
+main .contenedor-videos .contenedor-parrafo p {
+  width: 30vw;
+  padding-bottom: 4vw;
+  color: rgb(255, 255, 255);
+  font-size: 1.25em;
+  font-weight: 300;
+}
+main .contenedor-videos .contenedor-parrafo a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+main .contenedor-videos .contenedor-parrafo a:hover {
+  background: rgb(134, 134, 134);
+}
+main .contenedor-integrantes-fondo {
+  background-image: url("https://drive.google.com/uc?id=1GzMi1ACzBTARh3ouH7l8m1yppv6GxaD2");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor-integrantes-fondo .contenedor-integrantes {
+  display: grid;
+  grid-template-columns: 30vw 30vw;
+  grid-template-rows: 10vh 40vh;
+  grid-template-areas: "titulo titulo" "integrantes instrumentos";
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 80vh;
+  padding-top: 8vh;
+  margin-top: 7vh;
+  border-radius: 15px;
+}
+main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes {
+  grid-area: titulo;
+  padding-top: 3vh;
+}
+main .contenedor-integrantes-fondo .contenedor-integrantes p {
+  color: rgb(255, 255, 255);
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 2;
+  padding-top: 2vh;
+  /* @include animacion2; */
+}
+main .contenedor-integrantes-fondo .contenedor-integrantes .nombres-integrantes {
+  grid-area: integrantes;
+  text-align: right;
+  padding-right: 2vw;
+}
+main .contenedor-integrantes-fondo .contenedor-integrantes .instrumentos-integrantes {
+  grid-area: instrumentos;
+  padding-left: 2vw;
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+/* BIO */
+main .contenedor-bio-fondo {
+  padding: 15vh 10vw;
+  background-image: url("https://drive.google.com/uc?id=1K3UB8ewauYyJe8t98XfpWTqKf5i1s2qu");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "oswald", sans-serif;
+}
+main .contenedor-bio-fondo .contenedor-bio {
+  padding: 7vh 5vw;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 35px;
+}
+main .contenedor-bio-fondo .contenedor-bio .titulo-bio {
+  padding-bottom: 60px;
+}
+main .contenedor-bio-fondo .contenedor-bio .texto-bio {
+  padding-bottom: 5vh;
+}
+main .contenedor-bio-fondo .contenedor-bio .texto-bio h4 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 1.25em;
+  padding-bottom: 15px;
+  /* @include animacion2; */
+}
+main .contenedor-bio-fondo .contenedor-bio .texto-bio p {
+  color: rgb(255, 255, 255);
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-size: 1.15em;
+  padding-bottom: 20px;
+  /* @include animacion2; */
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+/* DISCOS */
+main .contenedor-discos-fondo {
+  height: 290vh;
+  background-color: rgb(30, 30, 30);
+}
+main .contenedor-discos-fondo .contenedor-discos {
+  padding: 13vh 17vw 0vh 17vw;
+}
+main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras {
+  display: block;
+}
+main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras iframe {
+  width: 65vw;
+  height: 53vh;
+  border: 0;
+}
+main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras .contenedor-letras {
+  text-align: center;
+  padding-top: 3vh;
+  list-style: none;
+  /* a{
+      @include animacion(fadeInUpBig, 3s);
+  } */
+}
+main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras .contenedor-letras li {
+  margin-top: 10px;
+}
+main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras .contenedor-letras a {
+  text-decoration: none;
+}
+main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras .contenedor-letras .formato-p:hover {
+  color: rgb(134, 134, 134);
+}
+main .contenedor-discos-fondo .contenedor-discos .disco-2 {
+  padding-top: 7vh;
+}
+main .contenedor-discos-fondo .contenedor-discos h2 {
+  padding: 4vh 0px;
+}
+main .contenedor-discos-fondo .contenedor-discos .formato-p {
+  color: rgb(255, 255, 255);
+  font-size: 1.25em;
+  font-weight: 200;
+  font-family: "Barlow", sans-serif;
+}
+main .contenedor-discos-fondo .contenedor-discos .descripcion {
+  padding-bottom: 4vh;
+  text-align: center;
+  /* @include animacion(fadeInUp, 3s); */
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+/* CONTACTO */
+main .contenedor-formulario-fondo {
+  background-image: url("https://drive.google.com/uc?id=1v_NPEiEXbBzbJIEgY4jJowHCa2N9H75H");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+}
+main .contenedor-formulario-fondo .contenedor-formulario {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15vh;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario {
+  width: 45vw;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "oswald", sans-serif;
+  text-align: center;
+  /* @include animacion(fadeIn, 3s); */
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
+  padding: 20px 0px;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario label {
+  color: rgb(134, 134, 134);
+  font-family: "oswald", sans-serif;
+  display: block;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .input {
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  font-family: "oswald", sans-serif;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .contacto-form {
+  padding-bottom: 10px;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .contacto-form .contacto {
+  display: inline-block;
+  padding: 0 8px;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .input-error-email {
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario textarea {
+  font-family: "oswald", sans-serif;
+  font-size: 1.1rem;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .boton-enviar {
+  text-align: center;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .enviar {
+  padding: 9px;
+  text-align: center;
+  width: 60%;
+  background: transparent;
+  color: rgb(134, 134, 134);
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 5px;
+  margin-bottom: 3vh;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .enviar:hover {
+  background: rgba(134, 134, 134, 0.7);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+main .contenedor-formulario-fondo .contenedor-formulario .contacto-popup {
+  position: fixed;
+  padding: 5px;
+  height: 10vh;
+  width: 20vw;
+  bottom: 17vh;
+  right: 7vw;
+  background-color: rgba(0, 0, 0, 0.76);
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel {
+  width: 45vw;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel h3 {
+  width: 20vw;
+  font-family: "oswald", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel .boton {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin-top: 4vh;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel .boton:hover {
+  background: rgb(134, 134, 134);
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+/* FOOTER */
+footer .contenedor-footer {
+  height: 15vh;
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15vh;
+  grid-template-areas: "logo nombre redes";
+}
+footer .contenedor-footer .footer-logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .contenedor-footer .footer-logo img {
+  height: 35px;
+}
+footer .contenedor-footer .footer-copyright {
+  color: rgb(255, 255, 255);
+  font-family: "oswald", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 1vh;
+}
+footer .contenedor-footer .footer-copyright a {
+  color: rgb(255, 255, 255);
+  font-family: "oswald", sans-serif;
+  padding-left: 8px;
+  text-decoration: none;
+}
+footer .contenedor-footer .footer-copyright a:hover {
+  color: rgb(134, 134, 134);
+}
+footer .contenedor-footer .footer-redes {
+  grid-area: redes;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .contenedor-footer .footer-redes a {
+  padding: 10px;
+}
+footer .contenedor-footer .footer-redes a img:hover {
+  /* @include animacion(pulse, 1s); */
+}/*# sourceMappingURL=App.css.map */

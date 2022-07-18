@@ -1,0 +1,42 @@
+@import './Variables.scss';
+
+/* NAVBAR */
+
+header{
+    position: fixed;
+    width: 100vw;
+    font-family: $ff;
+    font-size: 1.25em;
+    font-weight: 400;
+    .contenedor-menu{
+        @include centrar(flex, space-around,center);
+        height: 15vh;
+        background-color: map-get($colores, bcHeader);
+        .contenedor-logo{
+            @include centrar;
+            img{
+                padding-right: 10vw;
+                height: 45px;
+                &:hover{
+                    cursor: pointer;
+                    /* @include animacion(pulse, 2s); */
+                }
+            }
+        }
+        .contenedor-nav{
+            list-style-type: none;
+            grid-area: menu;
+            @include centrar(flex ,flex-end);
+            padding-left: 10vw;
+            a{
+                padding-left: 30px;
+                text-decoration: none;
+                color: map-get($colores, blanco);
+                &:hover{
+                    color: map-get($colores, gris);
+                }    
+            }
+        }
+        
+    }
+}

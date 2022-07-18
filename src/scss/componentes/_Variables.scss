@@ -1,0 +1,39 @@
+/* VARIABLES */
+
+$ff: 'oswald', sans-serif;
+
+$colores:(
+    gris: rgb(134, 134, 134),
+    blanco: rgb(255, 255, 255),
+    negro: rgb(0, 0, 0),
+    bcHeader:rgba( 0, 0, 0, 0.25),
+    bcHeaderMobile: rgba( 0, 0, 0, 0.45),
+    bcVideos: rgb(15, 15, 15),
+    bcIntegrantes: rgba( 0, 0, 0, 0.6),
+    bcBio: rgba( 0, 0, 0, 0.76),
+    bcGaleria: rgb( 30, 30, 30),
+);
+
+@mixin centrar($flex:flex, $jcenter:center, $acenter:center){
+    display: $flex;
+    justify-content: $jcenter;
+    align-items: $acenter;
+}
+
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+
+.titulo{
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 500;
+    /* @include animacion2; */
+    font-family: $ff;
+    text-align: center;
+}

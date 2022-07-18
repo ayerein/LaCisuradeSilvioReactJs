@@ -1,0 +1,132 @@
+@import './Variables';
+
+/* CONTACTO */
+
+main{
+    .contenedor-formulario-fondo{
+        background-image: url('https://drive.google.com/uc?id=1v_NPEiEXbBzbJIEgY4jJowHCa2N9H75H');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 85vh;
+        .contenedor-formulario{
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15vh;
+            .fondo-formulario{
+                width: 45vw;
+                background-color: map-get($colores, bcBio);
+                border-radius: 35px;
+                @include centrar;
+                font-family: $ff;
+                text-align: center;
+                /* @include animacion(fadeIn, 3s); */
+                h2{
+                    @extend .titulo;
+                    padding: 20px 0px;
+                }
+                label{
+                    color: map-get($colores, gris);;
+                    font-family: $ff;
+                    display: block;
+                    padding-bottom: 5px;
+                    font-size: 1.1rem;
+                }
+                .input{
+                    width: 80%;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                    background: transparent;
+                    border-radius: 5px;
+                    border: 1px solid map-get($colores, gris);
+                    color: map-get($colores, blanco);
+                    font-size: 1.1rem;
+                    font-family: $ff;
+                }
+                .contacto-form{
+                    padding-bottom: 10px;
+                    .contacto{
+                        display: inline-block;
+                        padding: 0 8px;
+                    }
+                }
+                .input-error-email{
+                    color: map-get($colores, blanco);
+                    margin-bottom: 10px;
+                }
+                textarea{
+                    font-family: $ff;
+                    font-size: 1.1rem;
+                }
+                .boton-enviar{
+                    text-align: center;
+                }
+                .enviar{
+                    padding: 9px;
+                    text-align: center;
+                    width: 60%;
+                    background: transparent;
+                    color: map-get($colores, gris);
+                    border: 1px solid map-get($colores, gris);
+                    border-radius: 5px;
+                    margin-bottom: 3vh;
+                    &:hover{
+                        background: rgba(134, 134, 134, 0.7);
+                        cursor: pointer;
+                        color: map-get($colores, negro);
+                    }
+                }
+                
+            }
+            .contacto-popup{
+                position: fixed;
+                padding: 5px;
+                height: 10vh;
+                width: 20vw;
+                bottom: 17vh;
+                right: 7vw;
+                background-color: map-get($colores, bcBio);
+                border: 1px solid map-get($colores, gris);
+                border-radius: 30px;
+                @include centrar;
+                font-family: $ff;
+                font-size: 1.2rem;
+                font-weight: 300;
+                text-align: center;
+                color: map-get($colores, blanco);
+            }
+            .fondo-cartel{
+                width: 45vw;
+                height: 60vh;
+                background-color: map-get($colores, bcBio);
+                border-radius: 35px;
+                @include centrar;
+                flex-direction: column;
+                text-align: center;
+                h3{
+                    width: 20vw;
+                    font-family: $ff;
+                    color: map-get($colores, blanco);
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                }
+                .boton{
+                    color: map-get($colores, blanco);
+                    text-decoration: none;
+                    padding: 10px 15px;
+                    border: 1px solid map-get($colores, blanco);
+                    border-radius: 5px;
+                    font-size: 1.1em;
+                    margin-top: 4vh;
+                    &:hover{
+                        background: map-get($colores, gris);
+            
+                    }
+                }
+            }
+        }
+    }
+
+}

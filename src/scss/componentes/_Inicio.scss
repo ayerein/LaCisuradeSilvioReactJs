@@ -1,0 +1,108 @@
+@import './Variables';
+
+/* INICIO */
+
+main{
+    .imagen-fondo-inicio{
+        background-image: url("https://drive.google.com/uc?id=1ih2XCoh8OCSpe2-8lMaHuEw9tQBsSRBs");
+        height: 100vh;
+        background-size: cover;
+    }
+    .contenedor-videos{
+        height: 100vh;
+        background: map-get($colores, bcVideos);
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas: 
+        ". . . . . . . . ."
+        ". . . titulo titulo titulo . . ."
+        ". video video video video parrafo parrafo parrafo ."
+        ". video video video video parrafo parrafo parrafo ."
+        ". video video video video parrafo parrafo parrafo ."
+        ". . . . . . . . .";
+        .titulo-videos{
+            grid-area: titulo;
+            @extend .titulo;
+            @include centrar;
+        }
+        .video{
+            grid-area: video;
+            iframe{
+                margin-top: 2vh;
+                width: 40vw;
+                height: 45vh;
+                border: 0px;
+            }
+        }
+        .contenedor-parrafo{
+            grid-area: parrafo;
+            text-align: center;
+            padding: 22% 0px 4vh 2vw;
+            font-family: $ff;
+            font-weight: 300;
+            /* @include animacion; */
+            p{
+                width: 30vw;
+                padding-bottom: 4vw;
+                color: map-get($colores, blanco);
+                font-size: 1.25em;
+                font-weight: 300;
+            }
+            a{
+                color: map-get($colores, blanco);
+                text-decoration: none;
+                padding: 10px 15px;
+                border: 1px solid map-get($colores, blanco);
+                border-radius: 5px;
+                font-size: 1.1em;
+                &:hover{
+                    background: map-get($colores, gris);
+        
+                }
+            }
+        }
+    }
+    .contenedor-integrantes-fondo{
+        background-image: url("https://drive.google.com/uc?id=1GzMi1ACzBTARh3ouH7l8m1yppv6GxaD2");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+        @include centrar;
+        .contenedor-integrantes{
+            display: grid;
+            grid-template-columns: 30vw 30vw;
+            grid-template-rows: 10vh 40vh;
+            grid-template-areas: "titulo titulo""integrantes instrumentos";
+            background-color: map-get($colores, bcIntegrantes);
+            height: 80vh;
+            padding-top: 8vh;
+            margin-top: 7vh;
+            border-radius: 15px;
+            .titulo-integrantes{
+                grid-area: titulo;
+                @extend .titulo;
+                padding-top: 3vh;
+            }
+            p{
+                color: map-get($colores, blanco);
+                font-size: 1.25em;
+                font-weight: 300;
+                line-height: 2;
+                padding-top: 2vh;
+                /* @include animacion2; */
+            }
+            .nombres-integrantes{
+                grid-area: integrantes;
+                text-align: right;
+                padding-right: 2vw;
+            }
+            .instrumentos-integrantes{
+                grid-area: instrumentos;
+                padding-left: 2vw;
+            }
+        }
+    }
+}
+

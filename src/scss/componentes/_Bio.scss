@@ -1,0 +1,43 @@
+@import './Variables';
+
+/* BIO */
+
+main{
+    .contenedor-bio-fondo{
+        padding: 15vh 10vw;
+        background-image: url('https://drive.google.com/uc?id=1K3UB8ewauYyJe8t98XfpWTqKf5i1s2qu');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: $ff;
+        .contenedor-bio{
+            padding: 7vh 5vw;
+            background-color: map-get($colores, bcBio);
+            border-radius: 35px;
+            .titulo-bio{
+                @extend .titulo;
+                padding-bottom: 60px;
+            }
+            .texto-bio{
+                padding-bottom: 5vh;
+                h4{
+                    text-align: center;
+                    color: map-get($colores, blanco);
+                    font-weight: 400;
+                    font-size: 1.25em;
+                    padding-bottom: 15px;
+                    /* @include animacion2; */
+                }
+                p{
+                    color: map-get($colores, blanco);
+                    font-family: 'Barlow', sans-serif;
+                    font-weight: 200;
+                    font-size: 1.15em;
+                    padding-bottom: 20px;
+                    /* @include animacion2; */
+                }
+            }
+        }
+    }
+}

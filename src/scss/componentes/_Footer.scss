@@ -1,0 +1,48 @@
+@import './Variables';
+
+/* FOOTER */
+
+footer{
+    .contenedor-footer{
+        height: 15vh;
+        background-color: map-get($colores, negro);
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 15vh;
+        grid-template-areas: "logo nombre redes";
+        .footer-logo{
+            grid-area: logo;
+            @include centrar;
+            img{
+                height: 35px;
+            }
+        }
+        .footer-copyright{
+            color: map-get($colores, blanco);
+            font-family: $ff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 1vh;
+            a{
+                color: map-get($colores, blanco);
+                font-family: $ff;
+                padding-left: 8px;
+                text-decoration: none;
+                &:hover{
+                    color: map-get($colores, gris);
+                }
+            }
+        }
+        .footer-redes{
+            grid-area: redes;
+            @include centrar;
+            a{
+                padding: 10px;
+                img:hover{
+                    /* @include animacion(pulse, 1s); */
+                }
+            }
+        }
+    }
+}
