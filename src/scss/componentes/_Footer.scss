@@ -18,19 +18,19 @@ footer{
             }
         }
         .footer-copyright{
-            color: map-get($colores, blanco);
+            color: map-get($colores, gris);
             font-family: $ff;
             display: flex;
             justify-content: center;
             align-items: flex-end;
             margin-bottom: 1vh;
             a{
-                color: map-get($colores, blanco);
+                color: map-get($colores, gris);
                 font-family: $ff;
                 padding-left: 8px;
                 text-decoration: none;
                 &:hover{
-                    color: map-get($colores, gris);
+                    color: map-get($colores, blanco);
                 }
             }
         }
@@ -39,9 +39,7 @@ footer{
             @include centrar;
             a{
                 padding: 10px;
-                img:hover{
-                    /* @include animacion(pulse, 1s); */
-                }
+                
             }
         }
     }

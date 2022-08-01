@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -65,6 +66,11 @@ header .contenedor-menu .contenedor-nav a {
 }
 header .contenedor-menu .contenedor-nav a:hover {
   color: rgb(134, 134, 134);
+}
+header .contenedor-menu .imagen-usuario {
+  position: relative;
+  left: 7vw;
+  top: 3px;
 }
 
 /* VARIABLES */
@@ -208,7 +214,6 @@ main .contenedor-bio-fondo {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   font-family: "oswald", sans-serif;
 }
 main .contenedor-bio-fondo .contenedor-bio {
@@ -259,18 +264,18 @@ main .contenedor-bio-fondo .contenedor-bio .texto-bio p {
 
 /* DISCOS */
 main .contenedor-discos-fondo {
-  height: 290vh;
+  /* height: 290vh; */
   background-color: rgb(30, 30, 30);
 }
 main .contenedor-discos-fondo .contenedor-discos {
-  padding: 13vh 17vw 0vh 17vw;
+  padding: 17vh 17vw 7vh 17vw;
 }
 main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras {
   display: block;
 }
 main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras iframe {
   width: 65vw;
-  height: 53vh;
+  height: 73vh;
   border: 0;
 }
 main .contenedor-discos-fondo .contenedor-discos .contenedor-iframe-letras .contenedor-letras {
@@ -332,7 +337,7 @@ main .contenedor-formulario-fondo {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 85vh;
+  height: 100vh;
 }
 main .contenedor-formulario-fondo .contenedor-formulario {
   height: 85vh;
@@ -364,14 +369,21 @@ main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario label
 }
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .input {
   width: 80%;
-  padding: 5px;
+  padding: 3px;
   margin-bottom: 10px;
   background: transparent;
   border-radius: 5px;
   border: 1px solid rgb(134, 134, 134);
   color: rgb(255, 255, 255);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: "oswald", sans-serif;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario input::-webkit-inner-spin-button,
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario input[type=number] {
+  -moz-appearance: textfield;
 }
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .contacto-form {
   padding-bottom: 10px;
@@ -386,7 +398,9 @@ main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .inpu
 }
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario textarea {
   font-family: "oswald", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  height: 20vh;
+  resize: none;
 }
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .boton-enviar {
   text-align: center;
@@ -404,7 +418,8 @@ main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .envi
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .enviar:hover {
   background: rgba(134, 134, 134, 0.7);
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
 }
 main .contenedor-formulario-fondo .contenedor-formulario .contacto-popup {
   position: fixed;
@@ -443,6 +458,9 @@ main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel h3 {
   font-size: 1.3rem;
   font-weight: 400;
 }
+main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel a {
+  text-decoration: none;
+}
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel .boton {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -450,10 +468,320 @@ main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel .boton {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   font-size: 1.1em;
+  font-family: "oswald", sans-serif;
   margin-top: 4vh;
 }
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel .boton:hover {
   background: rgb(134, 134, 134);
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+main .imagen-fondo-tienda {
+  background-image: url("https://drive.google.com/uc?id=1HNys06FEgVFMXPGuECPUuqXgvlRPC9cl");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .imagen-fondo-tienda .contenedor-productos {
+  width: 85vw;
+  min-height: 60vh;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 30px;
+  text-align: center;
+  margin: 3vh 0 0 0;
+}
+main .imagen-fondo-tienda .contenedor-productos .contenedor-categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+main .imagen-fondo-tienda .contenedor-productos .contenedor-categorias .opcion-categoria {
+  padding: 0vh 3vw;
+}
+main .imagen-fondo-tienda .contenedor-productos .contenedor-categorias .opcion-categoria p {
+  color: rgb(255, 255, 255);
+  font-family: "oswald", sans-serif;
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+main .ingreso-fondo {
+  background-image: url("https://drive.google.com/uc?id=1HNys06FEgVFMXPGuECPUuqXgvlRPC9cl");
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .ingreso-fondo .ingreso-contenedor {
+  height: 60vh;
+  width: 45vw;
+  margin-top: 15vh;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .ingreso-fondo .ingreso-contenedor .ingreso-titulo {
+  color: rgb(134, 134, 134);
+  font-size: 1.5rem;
+  font-family: "oswald", sans-serif;
+  padding-bottom: 5vh;
+}
+main .ingreso-fondo .ingreso-contenedor input {
+  width: 45%;
+  padding: 3px;
+  margin-bottom: 3vh;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+main .ingreso-fondo .ingreso-contenedor .ingreso-boton {
+  width: 45%;
+  padding: 3px;
+  margin-bottom: 5vh;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  font-size: 1rem;
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+main .ingreso-fondo .ingreso-contenedor .ingreso-boton:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+main .ingreso-fondo .ingreso-contenedor .error-contraseña {
+  color: rgb(255, 255, 255);
+  font-family: "oswald", sans-serif;
+  padding-bottom: 1vh;
+}
+main .ingreso-fondo .ingreso-contenedor .ingreso-crear-cuenta {
+  color: rgb(134, 134, 134);
+  font-size: 1rem;
+  font-family: "oswald", sans-serif;
+}
+main .ingreso-fondo .ingreso-contenedor .ingreso-crear-cuenta:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+main .ingreso-fondo .ingreso-contenedor .contenedor-usuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+}
+main .ingreso-fondo .ingreso-contenedor .contenedor-usuario .titulo-usuario {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-family: "oswald", sans-serif;
+  font-weight: 400;
+}
+main .ingreso-fondo .ingreso-contenedor .contenedor-usuario .boton-cerrar-sesion {
+  width: 20vw;
+  padding: 3px;
+  margin-top: 5vh;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  font-size: 1rem;
+  font-family: "oswald", sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+main .ingreso-fondo .ingreso-contenedor .contenedor-usuario .boton-cerrar-sesion:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+main .ingreso-fondo .ingreso-contenedor .formulario-datos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .ingreso-fondo .ingreso-contenedor .formulario-datos input {
+  width: 25vw;
+}
+main .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-videos .titulo-videos, main .contenedor-videos .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo-videos, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-integrantes-fondo .contenedor-integrantes .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo-integrantes, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-bio-fondo .contenedor-bio .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo-bio, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-discos-fondo .contenedor-discos .ingreso-fondo .ingreso-contenedor .formulario-datos h2, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .ingreso-fondo .ingreso-contenedor .formulario-datos h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-family: "oswald", sans-serif;
+  font-weight: 400;
+}
+main .ingreso-fondo .ingreso-contenedor .formulario-datos .p-datos {
+  color: rgb(255, 255, 255);
+  padding-bottom: 2vh;
+  font-family: "oswald", sans-serif;
+  font-weight: 300;
+}
+main .ingreso-fondo .ingreso-contenedor .formulario-datos .boton-guardar-datos {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  padding: 5px 25px;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+}
+main .ingreso-fondo .ingreso-contenedor .formulario-datos .boton-guardar-datos:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* VARIABLES */
+/* @mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+} */
+.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  /* @include animacion2; */
+  font-family: "oswald", sans-serif;
+  text-align: center;
+}
+
+/* PAGINA ADMINISTRADOR */
+main .contenedor-administrador {
+  background-image: url("https://drive.google.com/uc?id=1ih2XCoh8OCSpe2-8lMaHuEw9tQBsSRBs");
+  height: 100vh;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  font-family: "oswald", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor-administrador .contenedor-principal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas {
+  display: flex;
+  height: 75vh;
+  margin-top: 10vh;
+  width: 90vw;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 30px;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta {
+  width: 30vw;
+  height: 71vh;
+  overflow: auto;
+  margin: 2vh 2vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 15px;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual {
+  width: 25vw;
+  border-bottom: 1px solid rgb(134, 134, 134);
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual .consulta-individual {
+  padding: 3vh;
+  padding-left: 4vw;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual .consulta-individual:hover {
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual .consulta-individual .p-asunto {
+  font-weight: 200;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta {
+  width: 60vw;
+  height: 75vh;
+  padding: 5vh 5vw;
+  border-left: 1px solid rgb(134, 134, 134);
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-encabezado {
+  border-bottom: 1px solid rgb(134, 134, 134);
+  padding: 0 3vw 2vh 3vw;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-cuerpo {
+  padding: 2vh 3vw 0 3vw;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-cuerpo .p-asunto {
+  border-bottom: 1px solid rgb(134, 134, 134);
+  padding-bottom: 2vh;
+}
+main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-cuerpo .p-mensaje {
+  padding-top: 2vh;
 }
 
 /* VARIABLES */
@@ -493,7 +821,7 @@ footer .contenedor-footer .footer-logo img {
   height: 35px;
 }
 footer .contenedor-footer .footer-copyright {
-  color: rgb(255, 255, 255);
+  color: rgb(134, 134, 134);
   font-family: "oswald", sans-serif;
   display: flex;
   justify-content: center;
@@ -501,13 +829,13 @@ footer .contenedor-footer .footer-copyright {
   margin-bottom: 1vh;
 }
 footer .contenedor-footer .footer-copyright a {
-  color: rgb(255, 255, 255);
+  color: rgb(134, 134, 134);
   font-family: "oswald", sans-serif;
   padding-left: 8px;
   text-decoration: none;
 }
 footer .contenedor-footer .footer-copyright a:hover {
-  color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
 }
 footer .contenedor-footer .footer-redes {
   grid-area: redes;
@@ -517,7 +845,4 @@ footer .contenedor-footer .footer-redes {
 }
 footer .contenedor-footer .footer-redes a {
   padding: 10px;
-}
-footer .contenedor-footer .footer-redes a img:hover {
-  /* @include animacion(pulse, 1s); */
 }/*# sourceMappingURL=App.css.map */

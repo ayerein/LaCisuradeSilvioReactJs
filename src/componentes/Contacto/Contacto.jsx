@@ -9,6 +9,7 @@ const Contacto = () => {
     const [telefonoInput, cambioTelefonoInput] = useState()
     const [emailInput, cambioEmailInput] = useState()
     const [emailRep, cambioEmailRep] = useState()
+    const [asunto, cambioAsunto] = useState()
     const [mensaje, cambioMensaje] = useState()
 
     const [cartelFinal, aparecerCartelFinal] = useState( false )
@@ -17,7 +18,7 @@ const Contacto = () => {
         let consulta = {}
 
         consulta.datos = { nombre: nombreInput, telefono: telefonoInput, emailInput: emailInput }
-        consulta.mensaje = { mensaje: mensaje}
+        consulta.mensaje = { asunto: asunto, mensaje: mensaje}
 
         const datos = getFirestore()
         const consultaDatos = collection(datos, 'Consultas')
@@ -60,6 +61,7 @@ const Contacto = () => {
                             <input type="email" autoComplete="off" name="emailRep" placeholder='Vuelve a introducir tu email' className="input" onChange={(e) => {cambioEmailRep(e.target.value)} } />
                             <p className="input-error-email">{errorEmail}</p>
 
+                            <input type="text" autoComplete="off" name="asunto" id="aunto" placeholder="Asunto" className="input" required onChange={(e) => {cambioAsunto(e.target.value)}} />
                             <textarea name="mensaje" required cols="30" rows="10" placeholder="Escribe aqui tu mensaje y te contactaremos." className="input" onChange={(e) => {cambioMensaje(e.target.value)}} />
                             <div className="boton-enviar">
                                 <input type="submit" value="Enviar" className="enviar" onClick={ comprobarEmail } />

@@ -1,0 +1,29 @@
+@import './Variables.scss';
+
+main{
+    .imagen-fondo-tienda{
+        background-image: url("https://drive.google.com/uc?id=1HNys06FEgVFMXPGuECPUuqXgvlRPC9cl");
+        height: 100vh;
+        background-size: cover;
+        @include centrar;
+        .contenedor-productos{
+            width: 85vw;
+            min-height: 60vh;
+            background-color: map-get($colores, bcBio);
+            border-radius: 30px;
+            text-align: center;
+            margin: 3vh 0 0 0;
+            .contenedor-categorias{
+                @include centrar;
+                height: 60vh;
+                .opcion-categoria{
+                    padding: 0vh 3vw;
+                    p{
+                        color: map-get($colores, blanco);
+                        font-family: $ff;
+                    }
+                }
+            }
+        }
+    }
+}

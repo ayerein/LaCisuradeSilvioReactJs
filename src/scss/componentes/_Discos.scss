@@ -4,15 +4,15 @@
 
 main{
     .contenedor-discos-fondo{
-        height: 290vh;
+        /* height: 290vh; */
         background-color: map-get($colores, bcGaleria);
         .contenedor-discos{
-            padding: 13vh 17vw 0vh 17vw;
+            padding: 17vh 17vw 7vh 17vw;
             .contenedor-iframe-letras{
                 display: block;
                 iframe{
                     width: 65vw;
-                    height: 53vh;
+                    height: 73vh;
                     border: 0;
                 }
                 .contenedor-letras{
