@@ -14,15 +14,6 @@
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-videos .titulo-videos {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 /* NAVBAR */
 header {
   position: fixed;
@@ -49,6 +40,7 @@ header .contenedor-menu .contenedor-logo img {
 }
 header .contenedor-menu .contenedor-logo img:hover {
   cursor: pointer;
+  filter: invert(57%) sepia(0%) saturate(0%) hue-rotate(204deg) brightness(93%) contrast(90%);
   /* @include animacion(pulse, 2s); */
 }
 header .contenedor-menu .contenedor-nav {
@@ -72,6 +64,9 @@ header .contenedor-menu .imagen-usuario {
   left: 7vw;
   top: 3px;
 }
+header .contenedor-menu .imagen-usuario:hover {
+  filter: invert(57%) sepia(0%) saturate(0%) hue-rotate(204deg) brightness(93%) contrast(90%);
+}
 
 /* VARIABLES */
 /* @mixin animacion ($ani:fadeIn, $aniD:1s){
@@ -82,20 +77,11 @@ header .contenedor-menu .imagen-usuario {
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-videos .titulo-videos {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 /* INICIO */
 main .imagen-fondo-inicio {
-  background-image: url("https://drive.google.com/uc?id=1ih2XCoh8OCSpe2-8lMaHuEw9tQBsSRBs");
-  height: 100vh;
+  background-image: url("../../../public/assets/img/fondo-inicio.jpg");
   background-size: cover;
+  height: 100vh;
 }
 main .contenedor-videos {
   height: 100vh;
@@ -107,6 +93,11 @@ main .contenedor-videos {
 }
 main .contenedor-videos .titulo-videos {
   grid-area: titulo;
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,7 +138,7 @@ main .contenedor-videos .contenedor-parrafo a:hover {
   background: rgb(134, 134, 134);
 }
 main .contenedor-integrantes-fondo {
-  background-image: url("https://drive.google.com/uc?id=1GzMi1ACzBTARh3ouH7l8m1yppv6GxaD2");
+  background-image: url("../../../public/assets/img/fondo-integrantes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -169,6 +160,11 @@ main .contenedor-integrantes-fondo .contenedor-integrantes {
 }
 main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes {
   grid-area: titulo;
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
   padding-top: 3vh;
 }
 main .contenedor-integrantes-fondo .contenedor-integrantes p {
@@ -198,19 +194,10 @@ main .contenedor-integrantes-fondo .contenedor-integrantes .instrumentos-integra
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 /* BIO */
 main .contenedor-bio-fondo {
   padding: 15vh 10vw;
-  background-image: url("https://drive.google.com/uc?id=1K3UB8ewauYyJe8t98XfpWTqKf5i1s2qu");
+  background-image: url("../../../public/assets/img/fondo-bio.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,6 +209,11 @@ main .contenedor-bio-fondo .contenedor-bio {
   border-radius: 35px;
 }
 main .contenedor-bio-fondo .contenedor-bio .titulo-bio {
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
   padding-bottom: 60px;
 }
 main .contenedor-bio-fondo .contenedor-bio .texto-bio {
@@ -253,18 +245,8 @@ main .contenedor-bio-fondo .contenedor-bio .texto-bio p {
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 /* DISCOS */
 main .contenedor-discos-fondo {
-  /* height: 290vh; */
   background-color: rgb(30, 30, 30);
 }
 main .contenedor-discos-fondo .contenedor-discos {
@@ -299,6 +281,11 @@ main .contenedor-discos-fondo .contenedor-discos .disco-2 {
   padding-top: 7vh;
 }
 main .contenedor-discos-fondo .contenedor-discos h2 {
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
   padding: 4vh 0px;
 }
 main .contenedor-discos-fondo .contenedor-discos .formato-p {
@@ -322,22 +309,13 @@ main .contenedor-discos-fondo .contenedor-discos .descripcion {
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2 {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 /* CONTACTO */
 main .contenedor-formulario-fondo {
-  background-image: url("https://drive.google.com/uc?id=1v_NPEiEXbBzbJIEgY4jJowHCa2N9H75H");
+  background-image: url("../../../public/assets/img/fondo-contacto.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 85vh;
 }
 main .contenedor-formulario-fondo .contenedor-formulario {
   height: 85vh;
@@ -358,6 +336,11 @@ main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario {
   /* @include animacion(fadeIn, 3s); */
 }
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
   padding: 20px 0px;
 }
 main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario label {
@@ -484,43 +467,439 @@ main .contenedor-formulario-fondo .contenedor-formulario .fondo-cartel .boton:ho
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 main .imagen-fondo-tienda {
-  background-image: url("https://drive.google.com/uc?id=1HNys06FEgVFMXPGuECPUuqXgvlRPC9cl");
-  height: 100vh;
+  background-image: url("../../../public/assets/img/fondo-bio.jpg");
+  min-height: 85vh;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-attachment: fixed;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
 }
-main .imagen-fondo-tienda .contenedor-productos {
+main .imagen-fondo-tienda .contenedor-tienda {
   width: 85vw;
   min-height: 60vh;
   background-color: rgba(0, 0, 0, 0.76);
   border-radius: 30px;
   text-align: center;
-  margin: 3vh 0 0 0;
+  margin: auto;
 }
-main .imagen-fondo-tienda .contenedor-productos .contenedor-categorias {
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  min-height: 60vh;
 }
-main .imagen-fondo-tienda .contenedor-productos .contenedor-categorias .opcion-categoria {
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias .opcion-categoria {
   padding: 0vh 3vw;
 }
-main .imagen-fondo-tienda .contenedor-productos .contenedor-categorias .opcion-categoria p {
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias .opcion-categoria:hover {
+  cursor: pointer;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias .opcion-categoria p {
   color: rgb(255, 255, 255);
   font-family: "oswald", sans-serif;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias-dos {
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias-dos .opcion-seleccionada {
+  background-color: rgba(134, 134, 134, 0.2);
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias-dos .opcion-categoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 18vh;
+  width: 12vw;
+  border-radius: 30px;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias-dos .opcion-categoria:hover {
+  cursor: pointer;
+  background-color: rgba(134, 134, 134, 0.2);
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias-dos img {
+  height: 10vh;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias-dos p {
+  color: rgb(255, 255, 255);
+  font-family: "oswald", sans-serif;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-categorias-none {
+  display: none;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-productos .producto-individual {
+  height: 45vh;
+  width: 17vw;
+  padding-top: 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.76);
+  margin: 5vh 1vw;
+  color: #fff;
+  font-family: "oswald", sans-serif;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-productos .producto-individual .producto-imagen {
+  height: 170px;
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-productos .producto-individual .producto-titulo {
+  font-size: 1.3rem;
+  padding-bottom: 7px;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-productos .producto-individual .producto-precio {
+  padding-bottom: 2px;
+  font-weight: 300;
+  margin-bottom: 1vh;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-productos .producto-individual .producto-boton-comprar {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  padding: 1vh 2vw;
+}
+main .imagen-fondo-tienda .contenedor-tienda .contenedor-productos .producto-individual .producto-boton-comprar:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* Detalle del producto seleccionado */
+.imagen-fondo-detalles {
+  background-image: url("../../../public/assets/img/fondo-bio.jpg");
+  min-height: 85vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles {
+  width: 85vw;
+  min-height: 60vh;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 30px;
+  text-align: center;
+  margin: auto;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  width: 75vw;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .consulta-volver {
+  position: fixed;
+  top: 23vh;
+  right: 88vw;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .consulta-volver img:hover {
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: rgba(134, 134, 134, 0.4);
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion {
+  margin-left: 8vw;
+  color: #fff;
+  font-family: "oswald", sans-serif;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .detalles-titulo {
+  font-size: 1.3rem;
+  margin-bottom: 3vh;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .detalles-stock {
+  font-weight: 300;
+  margin-bottom: 2vh;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .contenedor-detalles-contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .contenedor-detalles-contador .boton-cantidad {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  padding: 0 5px;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .contenedor-detalles-contador .boton-cantidad:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .contenedor-detalles-contador .detalles-contador {
+  padding: 0 5px;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .boton-agregar {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  padding: 5px 25px;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .boton-agregar:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .boton-volver {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  padding: 5px 15px;
+  margin-top: 3vh;
+  margin-right: 1vw;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .boton-volver:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .boton-ir-carrito {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  padding: 5px 35px;
+  margin-top: 3vh;
+  margin-left: 1vw;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .detalles-descripcion .boton-ir-carrito:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.imagen-fondo-detalles .contenedor-fondo-detalles .contenedor-detalles .producto-imagen {
+  height: 50vh;
+  border-radius: 30px;
+}
+
+/* Carrito */
+.imagen-fondo-carrito {
+  background-image: url("https://drive.google.com/uc?id=1HNys06FEgVFMXPGuECPUuqXgvlRPC9cl");
+  min-height: 85vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+}
+.imagen-fondo-carrito .contenedor-carrito {
+  width: 85vw;
+  min-height: 60vh;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 30px;
+  text-align: center;
+  margin: auto;
+  padding-top: 2vh;
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  min-height: 40vh;
+}
+.imagen-fondo-carrito .contenedor-carrito .consulta-volver {
+  position: fixed;
+  top: 23vh;
+  right: 88vw;
+}
+.imagen-fondo-carrito .contenedor-carrito .consulta-volver img:hover {
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: rgba(134, 134, 134, 0.4);
+}
+.imagen-fondo-carrito .contenedor-carrito .carrito-titulo {
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-vacio {
+  height: 50vh;
+  padding-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid rgb(134, 134, 134);
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-vacio .carrito-vacio-titulo {
+  font-size: 1.3rem;
+  margin-bottom: 3vh;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-vacio .carrito-vacio-boton {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  padding: 5px 25px;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-vacio .carrito-vacio-boton:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles {
+  width: 75vw;
+  border-top: 1px solid rgb(134, 134, 134);
+  margin: auto;
+  padding-top: 3vh;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles {
+  height: 10vh;
+  width: 65vw;
+  border-bottom: 1px solid rgb(134, 134, 134);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "img descripcion descripcion contador contador remover";
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-img {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-img .carrito-detalles-img {
+  height: 50px;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-individual {
+  grid-area: descripcion;
+  display: flex;
+  align-items: center;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-contador {
+  grid-area: contador;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-contador .boton-cantidad {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin: 0 1vw;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-contador .boton-cantidad:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-remover {
+  grid-area: remover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-remover .boton-remover-item {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  height: 5vh;
+  padding: 0vh 1vw;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .carrito-detalles .contenedor-detalles-remover .boton-remover-item:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .precio-total {
+  margin-top: 5vh;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .boton-vaciar-carrito {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  padding: 1vh 5vw;
+}
+.imagen-fondo-carrito .contenedor-carrito .contenedor-carrito-detalles .boton-vaciar-carrito:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 /* VARIABLES */
@@ -532,17 +911,8 @@ main .imagen-fondo-tienda .contenedor-productos .contenedor-categorias .opcion-c
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 main .ingreso-fondo {
-  background-image: url("https://drive.google.com/uc?id=1HNys06FEgVFMXPGuECPUuqXgvlRPC9cl");
+  background-image: url("../../../public/assets/img/fondo-bio.jpg");
   height: 85vh;
   display: flex;
   justify-content: center;
@@ -651,7 +1021,7 @@ main .ingreso-fondo .ingreso-contenedor .formulario-datos {
 main .ingreso-fondo .ingreso-contenedor .formulario-datos input {
   width: 25vw;
 }
-main .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-videos .titulo-videos, main .contenedor-videos .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo-videos, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-integrantes-fondo .contenedor-integrantes .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo-integrantes, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-bio-fondo .contenedor-bio .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo-bio, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-discos-fondo .contenedor-discos .ingreso-fondo .ingreso-contenedor .formulario-datos h2, main .ingreso-fondo .ingreso-contenedor .formulario-datos .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario .ingreso-fondo .ingreso-contenedor .formulario-datos h2 {
+main .ingreso-fondo .ingreso-contenedor .formulario-datos .titulo {
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
@@ -693,18 +1063,9 @@ main .ingreso-fondo .ingreso-contenedor .formulario-datos .boton-guardar-datos:h
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 /* PAGINA ADMINISTRADOR */
-main .contenedor-administrador {
-  background-image: url("https://drive.google.com/uc?id=1ih2XCoh8OCSpe2-8lMaHuEw9tQBsSRBs");
+main .contenedor-admin-fondo {
+  background-image: url("../../../public/assets/img/fondo-inicio.jpg");
   height: 100vh;
   background-size: cover;
   color: rgb(255, 255, 255);
@@ -713,7 +1074,7 @@ main .contenedor-administrador {
   justify-content: center;
   align-items: center;
 }
-main .contenedor-administrador .contenedor-principal {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.76);
@@ -721,15 +1082,48 @@ main .contenedor-administrador .contenedor-principal {
   justify-content: center;
   align-items: center;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal {
   display: flex;
   height: 75vh;
   margin-top: 10vh;
   width: 90vw;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .categoria {
+  height: 20vh;
+  width: 15vw;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vw;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .categoria:hover {
+  background-color: rgba(0, 0, 0, 0.76);
+  cursor: pointer;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .consulta-volver {
+  position: fixed;
+  top: 20vh;
+  right: 90vw;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .consulta-volver img:hover {
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: rgba(134, 134, 134, 0.4);
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda {
+  display: flex;
+  height: 75vh;
+  width: 90vw;
+  /* STOCK */
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-seleccionar {
   width: 30vw;
   height: 71vh;
   overflow: auto;
@@ -739,49 +1133,193 @@ main .contenedor-administrador .contenedor-principal .contenedor-consultas .sele
   align-items: center;
   flex-direction: column;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta::-webkit-scrollbar {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-seleccionar::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta::-webkit-scrollbar-thumb {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-seleccionar::-webkit-scrollbar-thumb {
   background-color: transparent;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 15px;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual {
-  width: 25vw;
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-seleccionar .contenedor-consulta-individual {
+  width: 22vw;
+  margin-left: 3vw;
   border-bottom: 1px solid rgb(134, 134, 134);
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual .consulta-individual {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-seleccionar .contenedor-consulta-individual .consulta-individual {
   padding: 3vh;
   padding-left: 4vw;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual .consulta-individual:hover {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-seleccionar .contenedor-consulta-individual .consulta-individual:hover {
   cursor: pointer;
   font-size: 1.05rem;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .seleccionar-consulta .contenedor-consulta-individual .consulta-individual .p-asunto {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-seleccionar .contenedor-consulta-individual .consulta-individual .p-asunto {
   font-weight: 200;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta {
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-mostrar {
+  width: 60vw;
+  height: 75vh;
+  padding: 5vh 5vw;
+  border-left: 1px solid rgb(134, 134, 134);
+  /* CONSULTAS */
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-mostrar .msj-encabezado {
+  border-bottom: 1px solid rgb(134, 134, 134);
+  padding: 0 3vw 2vh 3vw;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-mostrar .msj-cuerpo {
+  padding: 2vh 3vw 0 3vw;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-mostrar .msj-cuerpo .p-asunto {
+  border-bottom: 1px solid rgb(134, 134, 134);
+  padding-bottom: 2vh;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-mostrar .msj-cuerpo .p-mensaje {
+  padding-top: 2vh;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 60vw;
   height: 75vh;
   padding: 5vh 5vw;
   border-left: 1px solid rgb(134, 134, 134);
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-encabezado {
-  border-bottom: 1px solid rgb(134, 134, 134);
-  padding: 0 3vw 2vh 3vw;
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form .titulo-agregar-productos {
+  color: #fff;
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 5vh;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-cuerpo {
-  padding: 2vh 3vw 0 3vw;
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form .input-base {
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-family: "oswald", sans-serif;
+  width: 80%;
+  padding: 3px;
+  margin-bottom: 10px;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-cuerpo .p-asunto {
-  border-bottom: 1px solid rgb(134, 134, 134);
-  padding-bottom: 2vh;
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form input::-webkit-inner-spin-button,
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
-main .contenedor-administrador .contenedor-principal .contenedor-consultas .mostrar-consulta .msj-cuerpo .p-mensaje {
-  padding-top: 2vh;
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form input[type=number] {
+  -moz-appearance: textfield;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form option {
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 134, 134);
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form .boton-actualizar-stock {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-family: "oswald", sans-serif;
+  margin-top: 4vh;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-form .boton-actualizar-stock:hover {
+  background: rgb(134, 134, 134);
+  cursor: pointer;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-administrar-stock {
+  padding: 7vh 5vw;
+  border-left: 1px solid rgb(134, 134, 134);
+  width: 60vw;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-administrar-stock .administrar-stock-descripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-administrar-stock .administrar-stock-descripcion img {
+  height: 180px;
+  width: 180px;
+  margin-right: 5vw;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-administrar-stock .administrar-stock-btn {
+  height: 3vh;
+  width: 15vw;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .contenedor-administrar-stock .administrar-stock-btn:hover {
+  cursor: pointer;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones input {
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-family: "oswald", sans-serif;
+  text-align: center;
+  width: 10vw;
+  margin-bottom: 1vh;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones input::-webkit-inner-spin-button,
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones input[type=number] {
+  -moz-appearance: textfield;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones .administrar-stock-btn {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  height: 5vh;
+  margin-bottom: 1vh;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones .administrar-stock-btn:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones .administrar-stock-btn-dos {
+  font-family: "oswald", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
+  width: 10vw;
+  margin-bottom: 1vh;
+}
+main .contenedor-admin-fondo .contenedor-admin-fondo-negro .contenedor-principal .contenedor-consultas-tienda .administrar-stock-botones .administrar-stock-btn-dos:hover {
+  background-color: rgb(134, 134, 134);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 /* VARIABLES */
@@ -793,15 +1331,6 @@ main .contenedor-administrador .contenedor-principal .contenedor-consultas .most
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-.titulo, main .contenedor-videos .titulo-videos, main .contenedor-integrantes-fondo .contenedor-integrantes .titulo-integrantes, main .contenedor-bio-fondo .contenedor-bio .titulo-bio, main .contenedor-discos-fondo .contenedor-discos h2, main .contenedor-formulario-fondo .contenedor-formulario .fondo-formulario h2 {
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 500;
-  /* @include animacion2; */
-  font-family: "oswald", sans-serif;
-  text-align: center;
-}
-
 /* FOOTER */
 footer .contenedor-footer {
   height: 15vh;
@@ -844,5 +1373,11 @@ footer .contenedor-footer .footer-redes {
   align-items: center;
 }
 footer .contenedor-footer .footer-redes a {
-  padding: 10px;
+  padding: 15px;
+}
+footer .contenedor-footer .footer-redes img {
+  height: 40px;
+}
+footer .contenedor-footer .footer-redes img:hover {
+  filter: invert(57%) sepia(0%) saturate(0%) hue-rotate(204deg) brightness(93%) contrast(90%);
 }/*# sourceMappingURL=App.css.map */

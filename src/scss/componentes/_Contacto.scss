@@ -4,11 +4,11 @@
 
 main{
     .contenedor-formulario-fondo{
-        background-image: url('https://drive.google.com/uc?id=1v_NPEiEXbBzbJIEgY4jJowHCa2N9H75H');
+        background-image: url('../../../public/assets/img/fondo-contacto.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
+        height: 85vh;
         .contenedor-formulario{
             height: 85vh;
             display: flex;
@@ -24,7 +24,7 @@ main{
                 text-align: center;
                 /* @include animacion(fadeIn, 3s); */
                 h2{
-                    @extend .titulo;
+                    @include titulo;
                     padding: 20px 0px;
                 }
                 label{

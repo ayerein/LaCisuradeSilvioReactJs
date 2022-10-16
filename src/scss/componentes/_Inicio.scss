@@ -4,9 +4,9 @@
 
 main{
     .imagen-fondo-inicio{
-        background-image: url("https://drive.google.com/uc?id=1ih2XCoh8OCSpe2-8lMaHuEw9tQBsSRBs");
-        height: 100vh;
+        background-image: url('../../../public/assets/img/fondo-inicio.jpg');
         background-size: cover;
+        height: 100vh;
     }
     .contenedor-videos{
         height: 100vh;
@@ -23,7 +23,7 @@ main{
         ". . . . . . . . .";
         .titulo-videos{
             grid-area: titulo;
-            @extend .titulo;
+            @include titulo;
             @include centrar;
         }
         .video{
@@ -64,7 +64,7 @@ main{
         }
     }
     .contenedor-integrantes-fondo{
-        background-image: url("https://drive.google.com/uc?id=1GzMi1ACzBTARh3ouH7l8m1yppv6GxaD2");
+        background-image: url('../../../public/assets/img/fondo-integrantes.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -82,7 +82,7 @@ main{
             border-radius: 15px;
             .titulo-integrantes{
                 grid-area: titulo;
-                @extend .titulo;
+                @include titulo;
                 padding-top: 3vh;
             }
             p{

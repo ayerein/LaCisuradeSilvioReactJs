@@ -1,39 +1,46 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import MenuNav from './componentes/MenuNav/MenuNav';
-import Inicio from './componentes/Inicio/Inicio';
-import Footer from './componentes/Footer/Footer';
-import Bio from './componentes/Bio/Bio';
-import Discos from './componentes/Discos/Discos';
-import Contacto from './componentes/Contacto/Contacto';
-import ContenedorTienda from './contenedores/ContenedorTienda/ContenedorTienda';
-import ContenedorIngreso from './contenedores/ContenedorIngreso/ContenedorIngreso';
 import ContenedorAdministrador from './contenedores/ContenedorAdministrador/ContenedorAdministrador';
-
-//  https://drive.google.com/uc?id=         link para img (agregar el id)
+import ProveedorContexto from './contexto/Contexto';
+import ContenedorCarrito from './contenedores/ContenedorCarrito/ContenedorCarrito';
+import ContenedorTienda from './contenedores/ContenedorTienda/ContenedorTienda';
+import TiendaDetalle from './componentes/Tienda/TiendaDetalle/TiendaDetalle';
+import MenuNav from './componentes/PaginaPrincipal/MenuNav/MenuNav';
+import Inicio from './componentes/PaginaPrincipal/Inicio/Inicio';
+import Footer from './componentes/PaginaPrincipal/Footer/Footer';
+import Bio from './componentes/PaginaPrincipal/Bio/Bio';
+import Discos from './componentes/PaginaPrincipal/Discos/Discos';
+import Contacto from './componentes/PaginaPrincipal/Contacto/Contacto';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <ProveedorContexto>
+        <div className="App">
 
-        <MenuNav />
+          <MenuNav /> 
 
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/bio" element={<Bio />} />
-          <Route path="/discos" element={<Discos />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/tienda" element={<ContenedorTienda />} />
-          <Route path="/ingreso" element={<ContenedorIngreso />} />
-          <Route path="/administrador" element={<ContenedorAdministrador />} />
+          <Routes>
+            <Route path="/" element={<Inicio />} /> 
+            <Route path="/bio" element={<Bio />} />
+            <Route path="/discos" element={<Discos />} />
+            <Route path="/contacto" element={<Contacto />} />
 
-          <Route path="/*" element={ <Navigate to="/" />} />
-        </Routes>
+            <Route path="/administrador" element={<ContenedorAdministrador />} />
 
-        <Footer />
+            <Route path="/tienda" element={<ContenedorTienda />} />
+            <Route path="/tienda/detalle/:id" element={<TiendaDetalle />} />
+            <Route path="/tienda/carrito" element={<ContenedorCarrito />} />
 
-      </div>
+            <Route path="/administrador" element={<ContenedorAdministrador />} />
+
+            <Route path="/*" element={ <Navigate to="/" />} />
+          </Routes>
+
+          <Footer />
+
+        </div>
+      </ProveedorContexto>
     </BrowserRouter>
   );
 }

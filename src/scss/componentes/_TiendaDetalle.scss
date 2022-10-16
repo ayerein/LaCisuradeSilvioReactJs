@@ -1,0 +1,96 @@
+/* Detalle del producto seleccionado */
+@import './Variables.scss';
+
+.imagen-fondo-detalles{
+    background-image: url("../../../public/assets/img/fondo-bio.jpg");
+    min-height: 85vh;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    .contenedor-fondo-detalles{
+        width: 65vw;
+        min-height: 60vh;
+        background-color: map-get($colores, bcBio);
+        border-radius: 30px;
+        text-align: center;
+        margin: auto;
+        color: map-get($colores, blanco);
+        .contenedor-detalles{
+            display: flex;
+            align-items: center;
+            height: 60vh;
+            .consulta-volver{
+                position: fixed;
+                top: 23vh;
+                right: 88vw;
+                img:hover{
+                    cursor: pointer;
+                    border-radius: 30px;
+                    background-color: rgba(134, 134, 134, 0.4);
+                }
+            }
+            .producto-imagen{
+                height: 48vh;
+                width: 25vw;
+                margin: 0 4vw;
+                border-radius: 30px;
+            }
+            .detalles-descripcion{
+                width: 32vw;
+                @include font;
+                font-size: 1.2rem;
+                @include centrar;
+                flex-direction: column;
+                height: 43vh;
+                border-left: 1px solid map-get($colores, gris);
+                .detalles-titulo{
+                    font-size: 1.5rem;
+                    margin-bottom: 3vh;
+                }
+                .p-detalles{
+                    font-weight: 300;
+                }
+                .contenedor-detalles-contador{
+                    @include centrar;
+                    flex-direction: column;
+                    .contador{
+                        @include centrar($jcenter:space-around);
+                        height: 4vh;
+                        border: 1px solid map-get($colores, gris);
+                        border-radius: 5px;
+                        width: 10vw;
+                        margin-top: 1vh;
+                        .sumarRestar{
+                            font-size: 1.3rem;
+                            width: 2vw;
+                            color: map-get($colores, gris);
+                            &:hover{
+                                cursor: pointer;
+                                color: map-get($colores, blanco);
+                            }
+                        }
+                    }
+                }    
+                .p-detalles-agregado{
+                    margin-top: 2vh
+                }
+                .boton-agregar{
+                    @include botones;
+                    width: 10vw;
+                    height: 5vh;
+                    margin: 2vh .5vw 0 .5vw;
+                }
+                .boton-volver{
+                    position: absolute;
+                    top: 29vh;
+                    left: 52vw
+                }
+                .boton-ir-carrito{
+                    @extend .boton-agregar;
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,194 @@
+/* Carrito */
+.imagen-fondo-carrito{
+    background-image: url("../../../public/assets/img/fondo-bio.jpg");
+    min-height: 85vh;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    .contenedor-carrito{
+        width: 85vw;
+        min-height: 60vh;
+        background-color: map-get($colores, bcBio);
+        border-radius: 30px;
+        text-align: center;
+        margin: auto;
+        padding-top: 2vh;
+        @include font;
+        .consulta-volver{
+            position: absolute;
+                top: 23vh;
+                right: 88vw;
+                img:hover{
+                    cursor: pointer;
+                    border-radius: 30px;
+                    background-color: rgba(134, 134, 134, 0.4);
+                }
+        }
+        .carrito-titulo{
+            @include font;
+            font-weight: 400;
+            margin-bottom: 2vh;
+        }
+        .contenedor-carrito-vacio{
+            height: 50vh;
+            padding-bottom: 5vh;
+            @include centrar;
+            flex-direction: column;
+            border-top: 1px solid map-get($colores, gris);
+            .carrito-vacio-titulo{
+                font-size: 1.3rem;
+                margin-bottom: 3vh;
+            }
+            .carrito-vacio-boton{
+                @include botones;
+                padding: 5px 25px;
+            }
+        }
+        .contenedor-carrito-detalles{
+            width: 75vw;
+            border-top: 1px solid map-get($colores, gris);
+            margin: auto;
+            padding-top: 3vh;
+            .carrito-detalles{
+                height: 10vh;
+                width: 65vw;
+                border-bottom: 1px solid map-get($colores, gris);
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-areas: "img descripcion descripcion precio contador contador remover";
+                .contenedor-detalles-img{
+                    grid-area: img;
+                    @include centrar;
+                    .carrito-detalles-img{
+                        height: 50px;
+                    }
+                }
+                .contenedor-detalles-individual{
+                    grid-area: descripcion;
+                    display: flex;
+                    align-items: center;
+                }
+                .contenedor-detalles-precio{
+                    grid-area: precio;
+                    @include centrar;
+                }
+                .contenedor-detalles-contador{
+                    grid-area: contador;
+                    @include centrar;
+                    .boton-cantidad{
+                        @include botones;
+                        border-radius: 5px;
+                        width: 2vw;
+                        height: 4vh;
+                        margin: 0 1vw;
+                    }
+                }
+                .contenedor-detalles-remover{
+                    grid-area: remover;
+                    @include centrar;
+                    .boton-remover-item{
+                        @include botones;
+                        height: 5vh;
+                        width: 3vw;
+                    }
+                }
+            }
+            .precio-total{
+                margin-top: 5vh;
+                font-size: 1.1rem;
+                font-weight: 300;
+            }
+
+            .boton-vaciar-carrito{
+                margin: 5vh 1vw;
+                @include botones;
+                height: 6vh;
+                width: 20vw;
+            }
+        }
+        .contenedor-confirmar-compra{
+            display: grid;
+            grid-template-columns: 50vw 35vw;
+            grid-area: 'resumen formulario';
+            padding: 5vh 0;
+            .compra-detalles{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                
+                .compra-detalles-individual{
+                    @include centrar($jcenter:space-between);
+                    width: 80%;
+                    height: 10vh;
+                    border-bottom: 1px solid map-get($colores, gris);
+                    margin-bottom: 1vh;
+                }
+                .carrito-detalles-img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+            .formulario-datos{
+                @include centrar;
+                flex-direction: column;
+                input{
+                    width: 75%;
+                    padding: 3px;
+                    margin-bottom: 2vh;
+                    background: transparent;
+                    border-radius: 5px;
+                    border: 1px solid map-get($colores, gris);
+                    color: map-get($colores, blanco);
+                    font-size: 1rem;
+                    font-family: $ff;
+                    text-align: center;
+                }
+                .titulo{
+                    font-weight: 400;
+                }
+                .p-datos{
+                    color: map-get($colores, blanco);
+                    padding-bottom: 2vh;
+                    font-family: $ff;
+                    font-size: 1.1rem;
+                    width: 80%;
+                    font-weight: 300;
+                }
+                .boton-guardar-datos{
+                    font-family: $ff;
+                    font-size: 1rem;
+                    background: transparent;
+                    width: 40%;
+                    height: 10%;
+                    border-radius: 5px;
+                    border: 1px solid map-get($colores, gris);
+                    color: map-get($colores, gris);background: transparent;
+                    border-radius: 5px;
+                    border: 1px solid map-get($colores, gris);
+                    color: map-get($colores, gris);
+                    &:hover{
+                        background-color: map-get($colores, gris);
+                        color: map-get($colores, blanco);
+                        border: 1px solid map-get($colores, blanco);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .carrito-cartel-final{
+            height: 55vh;
+            @include centrar;
+            flex-direction: column;
+            .titulo-cartel{
+                font-size: 1.8rem;
+                margin-bottom: 5vh;
+            }
+            .p-cartel{
+                font-size: 1.2rem;
+                font-weight: 200;
+            }
+        }
+    }
+}

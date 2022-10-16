@@ -3,76 +3,238 @@
 /* PAGINA ADMINISTRADOR */
 
 main{
-    .contenedor-administrador{
-        background-image: url("https://drive.google.com/uc?id=1ih2XCoh8OCSpe2-8lMaHuEw9tQBsSRBs");
+    .contenedor-admin-fondo{
+        background-image: url("../../../public/assets/img/fondo-inicio.jpg");
         height: 100vh;
         background-size: cover;
         color: map-get($colores, blanco);
         font-family: $ff;
         @include centrar;
-        .contenedor-principal{
+        .contenedor-admin-fondo-negro{
             height: 100vh;
             width: 100vw;
             background-color: map-get($colores, bcBio);
             @include centrar;
-            .contenedor-consultas{
+            .contenedor-principal{
                 display: flex;
                 height: 75vh;
                 margin-top: 10vh;
                 width: 90vw;
                 border: 1px solid map-get($colores, gris);
                 border-radius: 30px;
-                .seleccionar-consulta{
-                    width: 30vw;
-                    height: 71vh;
-                    overflow: auto;
-                    margin: 2vh 2vw;
+                @include centrar;
+                .categoria{
+                    height: 20vh;
+                    width: 15vw;
+                    border: 1px solid map-get($colores, gris);
+                    border-radius: 30px;
+                    @include centrar;
+                    margin: 5vw;
+                    &:hover{
+                        background-color: map-get($colores, bcBio);
+                        cursor: pointer;
+                    }
+                }
+                .consulta-volver{
+                    position: absolute;
+                    top: 20vh;
+                    right: 90vw;
+                    img:hover{
+                        cursor: pointer;
+                        border-radius: 30px;
+                        background-color: rgba(134, 134, 134, 0.4);
+                    }
+                }
+                .contenedor-consultas-tienda{
                     display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    flex-direction: column;
-                    &::-webkit-scrollbar {
-                        background-color: transparent;
-                        width: 8px;
+                    height: 75vh;
+                    width: 90vw;
+                    .contenedor-seleccionar{
+                        width: 30vw;
+                        height: 71vh;
+                        overflow: auto;
+                        margin: 2vh 2vw;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        &::-webkit-scrollbar {
+                            background-color: transparent;
+                            width: 8px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: transparent;
+                            border: 1px solid map-get($colores, gris);
+                            border-radius: 15px;
+                        }
+                        
+                        .contenedor-consulta-individual{
+                            width: 22vw;
+                            border-bottom: 1px solid map-get($colores, gris);
+                            .consulta-individual{
+                                padding: 3vh;
+                                padding-left: 4vw;
+                                &:hover{
+                                    cursor: pointer;
+                                    color: map-get($colores, gris);;
+                                }
+                                .p-asunto{
+                                    font-weight: 200;
+                                }
+                            }
+                        }
                     }
-                    &::-webkit-scrollbar-thumb {
-                        background-color: transparent;
-                        border: 1px solid map-get($colores, gris);
-                        border-radius: 15px;
+                    .contenedor-mostrar-consultas{
+                        width: 60vw;
+                        height: 75vh;
+                        padding: 5vh 5vw;
+                        border-left: 1px solid map-get($colores, gris); 
+                        /* CONSULTAS */
+                        .msj-encabezado{
+                            border-bottom: 1px solid map-get($colores, gris); 
+                            padding: 0 3vw 2vh 3vw;
+                        }
+                        .msj-cuerpo{
+                            padding: 2vh 3vw 0 3vw;
+                            .p-asunto{
+                                border-bottom: 1px solid map-get($colores, gris);
+                                padding-bottom: 2vh;
+                            }
+                            .p-mensaje{
+                                padding-top: 2vh;
+                            }
+                        }
                     }
-                    .contenedor-consulta-individual{
-                        width: 25vw;
-                        border-bottom: 1px solid map-get($colores, gris);
-                        .consulta-individual{
-                            padding: 3vh;
-                            padding-left: 4vw;
+                    /* STOCK */
+                    .contenedor-form{
+                        @include centrar;
+                        flex-direction: column;
+                        width: 60vw;
+                        height: 75vh;
+                        padding: 5vh 5vw;
+                        border-left: 1px solid map-get($colores, gris);
+                        .titulo-agregar-productos{
+                            @include titulo;
+                            padding-bottom: 5vh;
+                        }
+                        .input-base{
+                            @include inputs;
+                            width: 80%;
+                            padding: 3px;
+                            margin-bottom: 10px;
+                        }
+                        @include inputNumber;
+                        option{
+                            background-color: map-get($colores, blanco);
+                            color: map-get($colores, gris);
+                        }
+                        .boton-actualizar-stock{
+                            color: map-get($colores, blanco);
+                            background-color: transparent;
+                            text-decoration: none;
+                            padding: 10px 15px;
+                            border: 1px solid map-get($colores, blanco);
+                            border-radius: 5px;
+                            font-size: 1.1em;
+                            font-family: $ff;
+                            margin-top: 4vh;
+                            &:hover{
+                                background: map-get($colores, gris);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .contenedor-administrar-stock{
+                        padding: 7vh 5vw;
+                        border-left: 1px solid map-get($colores, gris);
+                        width: 60vw;
+                        .administrar-stock-descripcion{
+                            @include centrar;
+                            img{
+                                height: 180px;
+                                width: 180px;
+                                margin-right: 5vw;
+                            }
+                        }
+                        .administrar-stock-btn{
+                            height: 3vh;
+                            width: 15vw;
                             &:hover{
                                 cursor: pointer;
-                                font-size: 1.05rem;
                             }
-                            .p-asunto{
-                                font-weight: 200;
-                            }
+                        }
+                    }
+                    .administrar-stock-botones{
+                        @include centrar;
+                        flex-direction: column;
+                        margin-top: 5vh;
+                        input {
+                            @include inputs;
+                            text-align: center;
+                            width: 10vw;
+                            margin-bottom: 1vh;
+                            margin-top: 1vh
+                        }
+                        @include inputNumber;
+                        .administrar-stock-btn{
+                            @include botones;
+                            height: 6vh;
+                            width: 25vw;
+                            margin-bottom: 2vh;               
+                        }
+                        .administrar-stock-btn-dos{
+                            @include botones;
+                            width: 10vw;
+                            margin: 0 .5vw 1vh .5vw;
+                            margin-bottom: 1vh;
+                        }
+                        .administrar-nuevo-stock-precio{
+                            width: 23vw;
+                            text-align: center;
                         }
                     }
                 }
-                .mostrar-consulta{
-                    width: 60vw;
-                    height: 75vh;
-                    padding: 5vh 5vw;
-                    border-left: 1px solid map-get($colores, gris); 
-                    .msj-encabezado{
-                        border-bottom: 1px solid map-get($colores, gris); 
-                        padding: 0 3vw 2vh 3vw;
-                    }
-                    .msj-cuerpo{
-                        padding: 2vh 3vw 0 3vw;
-                        .p-asunto{
-                            border-bottom: 1px solid map-get($colores, gris);
-                            padding-bottom: 2vh;
+                /* Administrar pedidos */
+                .contenedor-pedidos-tienda{
+                    @extend .contenedor-consultas-tienda;
+                    .seleccionar-pedidos{
+                        @extend .contenedor-seleccionar;
+                        .contenedor-pedido-individual{
+                            @extend .contenedor-consulta-individual;
+                            .pedido-individual{
+                                @extend .consulta-individual;
+                            }
                         }
-                        .p-mensaje{
-                            padding-top: 2vh;
+                    }
+                    .contenedor-mostrar-pedidos{
+                        @extend .contenedor-mostrar-consultas;
+                        .pedido-encabezado{
+                            padding-bottom: 1vh;
+                            .encabezado-fecha{
+                                text-align: right;
+                            }
+                            border-bottom: 1px solid map-get($colores, gris);
+                        }
+                        .pedido-envio{
+                            margin: 1vh 0;
+                        }
+                        .pedido-objetos{
+                            height: 38vh;
+                            @include centrar($jcenter:flex-start);
+                            flex-direction: column;
+                            border-bottom: 1px solid map-get($colores, gris);
+                            border-top: 1px solid map-get($colores, gris);
+                            overflow: auto;
+                            .pedido-objetos-individuales{
+                                @include centrar($jcenter:Space-between);
+                                border-bottom: 1px solid map-get($colores, gris);
+                                width: 80%;
+                                margin: 1vh;
+                                padding: 1vh 0;
+                                img{
+                                    height: 50px;
+                                }
+                            }
                         }
                     }
                 }

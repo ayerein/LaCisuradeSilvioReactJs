@@ -1,12 +1,12 @@
-import AdministradorConsultas from "../../componentes/AdministradorConsultas/AdministradorConsultas"
+import AdministradorCategorias from "../../componentes/Administrador/AdministradorCategorias/AdministradorCategorias"
 
 
 const ContenedorAdministrador = () => {
     return(
         <main>
-            <div className="contenedor-administrador">
-                <div className="contenedor-principal">
-                    <AdministradorConsultas />
+            <div className="contenedor-admin-fondo">
+                <div className="contenedor-admin-fondo-negro">
+                    <AdministradorCategorias />
                 </div>
             </div>
         </main>

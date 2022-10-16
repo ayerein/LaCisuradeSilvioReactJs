@@ -5,7 +5,7 @@
 main{
     .contenedor-bio-fondo{
         padding: 15vh 10vw;
-        background-image: url('https://drive.google.com/uc?id=1K3UB8ewauYyJe8t98XfpWTqKf5i1s2qu');
+        background-image: url('../../../public/assets/img/fondo-bio.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -15,7 +15,7 @@ main{
             background-color: map-get($colores, bcBio);
             border-radius: 35px;
             .titulo-bio{
-                @extend .titulo;
+                @include titulo;
                 padding-bottom: 60px;
             }
             .texto-bio{

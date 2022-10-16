@@ -1,29 +1,101 @@
 @import './Variables.scss';
 
 main{
+    color: map-get($colores, blanco);
     .imagen-fondo-tienda{
-        background-image: url("https://drive.google.com/uc?id=1HNys06FEgVFMXPGuECPUuqXgvlRPC9cl");
-        height: 100vh;
+        background-image: url("../../../public/assets/img/fondo-bio.jpg");
+        min-height: 85vh;
         background-size: cover;
-        @include centrar;
-        .contenedor-productos{
+        background-attachment: fixed;
+        padding-top: 20vh;
+        padding-bottom: 5vh;
+        .contenedor-tienda{
             width: 85vw;
             min-height: 60vh;
             background-color: map-get($colores, bcBio);
             border-radius: 30px;
             text-align: center;
-            margin: 3vh 0 0 0;
+            margin: auto;
             .contenedor-categorias{
                 @include centrar;
-                height: 60vh;
+                min-height: 60vh;
                 .opcion-categoria{
                     padding: 0vh 3vw;
+                    &:hover{
+                        cursor: pointer;
+                    }
                     p{
                         color: map-get($colores, blanco);
                         font-family: $ff;
                     }
                 }
             }
+            .contenedor-categorias-dos{
+                height: 20vh;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .opcion-seleccionada{
+                    background-color: map-get($colores, grisT);
+                }
+                .opcion-categoria{
+                    @include centrar;
+                    flex-direction: column;
+                    height: 18vh;
+                    width: 12vw;
+                    border-radius: 30px;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: map-get($colores, grisT);
+                    }
+                }
+                img{
+                    height: 10vh
+                }
+                p{
+                    color: map-get($colores, blanco);
+                    font-family: $ff;
+                }
+            }
+            .contenedor-categorias-none{
+                display: none;
+            }
+            .contenedor-productos{
+                @include centrar;
+                .producto-individual{
+                    height: 45vh;
+                    width: 17vw;
+                    padding-top: 15px;
+                    border: 1px solid map-get($colores, blanco);
+                    border-radius: 10px;
+                    text-align: center;
+                    background-color: map-get($colores, bcBio);
+                    margin: 5vh 1vw;
+                    @include font;
+                    .producto-imagen{
+                        height: 170px;
+                        width: 150px;
+                        border-radius: 5px;
+                        margin-bottom: 5px;
+                    }
+                    .producto-titulo{
+                        font-size: 1.3rem;
+                        padding-bottom: 7px;
+                    }
+                    .producto-precio{
+                        padding-bottom: 2px;
+                        font-weight: 300;
+                        margin-bottom: 1vh;
+                    }
+                    .producto-boton-comprar{
+                        @include botones;
+                        padding: 1vh 2vw;
+                    }
+                }
+                
+            }
         }
+        
+        
     }
 }

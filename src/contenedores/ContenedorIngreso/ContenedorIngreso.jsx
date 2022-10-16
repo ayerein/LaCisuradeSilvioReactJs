@@ -1,6 +1,6 @@
 import { useState } from "react"
-import CrearCuenta from "../../componentes/CrearCuenta/CrearCuenta"
-import IniciarSesion from "../../componentes/IniciarSesion/IniciarSesion"
+import CrearCuenta from "../../componentes/Cuenta/CrearCuenta/CrearCuenta"
+import IniciarSesion from "../../componentes/Cuenta/IniciarSesion/IniciarSesion"
 
 const ContenedorIngreso = () => {
     const [ boton, cambiarBoton ] = useState(true)
@@ -10,14 +10,9 @@ const ContenedorIngreso = () => {
     }
 
     return(
-        <main>
-            <div className="ingreso-fondo">
-                <div className="ingreso-contenedor">
-                    {boton ? <IniciarSesion cambio={cambio}/> : <CrearCuenta cambio={cambio}/>}
-                </div>
-                
-            </div>
-        </main>
+        <div className="ingreso-contenedor">
+            {boton ? <IniciarSesion cambio={cambio}/> : <CrearCuenta cambio={cambio}/>}
+        </div>
     )
 }
 

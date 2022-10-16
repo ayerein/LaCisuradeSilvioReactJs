@@ -19,6 +19,7 @@ header{
                 height: 45px;
                 &:hover{
                     cursor: pointer;
+                    filter: invert(57%) sepia(0%) saturate(0%) hue-rotate(204deg) brightness(93%) contrast(90%);
                     /* @include animacion(pulse, 2s); */
                 }
             }
@@ -37,10 +38,5 @@ header{
                 }    
             }
         }
-        .imagen-usuario{
-            position: relative;
-            left: 7vw;
-            top: 3px;
-        }  
     }
 }

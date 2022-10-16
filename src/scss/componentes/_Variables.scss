@@ -4,6 +4,7 @@ $ff: 'oswald', sans-serif;
 
 $colores:(
     gris: rgb(134, 134, 134),
+    grisT: rgba(134, 134, 134, 0.2),
     blanco: rgb(255, 255, 255),
     negro: rgb(0, 0, 0),
     bcHeader:rgba( 0, 0, 0, 0.25),
@@ -20,6 +21,50 @@ $colores:(
     align-items: $acenter;
 }
 
+@mixin botones{
+    font-family: $ff;
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 5px;
+    color: map-get($colores, gris);
+    border: 1px solid map-get($colores, gris);
+    &:hover{
+        background-color: map-get($colores, gris);
+        color: map-get($colores, blanco);
+        border: 1px solid map-get($colores, blanco);
+        cursor: pointer;
+    }
+}
+@mixin inputs{
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid map-get($colores, gris);
+    color: map-get($colores, blanco);
+    font-size: 1rem;
+    font-family: $ff;
+}
+@mixin inputNumber{
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button{
+        -webkit-appearance:none;
+    }
+    input[type="number"]{
+    -moz-appearance:textfield;
+    }
+}
+
+@mixin font{
+    color: #fff;
+    font-family: $ff;
+}
+
+@mixin titulo{
+    color: #fff;
+    font-family: $ff;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
 /* @mixin animacion ($ani:fadeIn, $aniD:1s){
     animation: $ani;
     animation-duration: $aniD;
@@ -28,12 +73,3 @@ $colores:(
     animation: fadeInUp;
     animation-duration: 2s;
 } */
-
-.titulo{
-    color: #fff;
-    font-size: 1.8em;
-    font-weight: 500;
-    /* @include animacion2; */
-    font-family: $ff;
-    text-align: center;
-}
